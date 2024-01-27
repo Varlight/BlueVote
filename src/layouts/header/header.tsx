@@ -25,7 +25,6 @@ function NotificationButton() {
 function HeaderRightArea() {
   return (
     <div className="relative order-last flex shrink-0 items-center gap-4 sm:gap-6 lg:gap-8">
-      <NotificationButton />
       <WalletConnect />
     </div>
   );
@@ -49,10 +48,10 @@ export default function Header({ className }: { className?: string }) {
       <div className="flex h-full items-center justify-between px-4 sm:px-6 lg:px-8 3xl:px-10">
         <div className="flex items-center">
           <div
-            onClick={() => router.push(routes.home)}
+            onClick={() => router.push('/?layout=Minimal')}
             className="flex items-center xl:hidden"
           >
-            <h1 style={{ color: "blue", fontWeight: "bold" }}>Blue</h1>
+            <h1 style={{ color: 'blue', fontWeight: 'bold' }}>Blue</h1>
           </div>
           <div className="mx-2 block sm:mx-4 xl:hidden">
             <Hamburger

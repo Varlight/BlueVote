@@ -56,7 +56,7 @@ export default function VoteDetailsCard({ vote }: any) {
             {vote.title}
           </h3>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Country ID {vote.id}
+            Candidate ID {vote.id}
           </p>
 
           {/* show only when vote is active */}
@@ -149,21 +149,7 @@ export default function VoteDetailsCard({ vote }: any) {
             exit="exit"
             variants={fadeInBottom('easeIn', 0.25, 16)}
           >
-            <div className="my-6 border-y border-dashed border-gray-200 py-6 text-gray-500 dark:border-gray-700 dark:text-gray-400">
-              Proposed by:{' '}
-              <a
-                href={vote.proposed_by.link}
-                className="ml-1 inline-flex items-center gap-3 font-medium text-gray-900 hover:underline hover:opacity-90 focus:underline focus:opacity-90 dark:text-gray-100"
-              >
-                {vote.proposed_by.id} <ExportIcon className="h-auto w-3" />
-              </a>
-            </div>
-            <VotePoll
-              title={'Votes'}
-              accepted={vote?.accepted}
-              rejected={vote?.rejected}
-            />
-            <VoterTable votes={vote?.votes} />
+            <br />
             <RevealContent defaultHeight={250}>
               <h4 className="mb-6 uppercase dark:text-gray-100">Description</h4>
               <div
@@ -171,12 +157,7 @@ export default function VoteDetailsCard({ vote }: any) {
                 dangerouslySetInnerHTML={{ __html: vote.description }}
               />
             </RevealContent>
-            <RevealContent
-              defaultHeight={320}
-              className="mt-6 border-t border-dashed border-gray-200 pt-6 dark:border-gray-700"
-            >
-              <VoteActions title={'Actions'} action={vote?.action} />
-            </RevealContent>
+
             <div className="mt-6 flex items-center justify-center border-t border-dashed border-gray-200 pt-6 dark:border-gray-700">
               <Button
                 shape="rounded"
@@ -186,8 +167,9 @@ export default function VoteDetailsCard({ vote }: any) {
                   'w-full lg:w-3/6 2xl:w-[48%] 3xl:w-1/3':
                     layout === LAYOUT_OPTIONS.RETRO,
                 })}
+                onClick={() => setIsExpand(false)}
               >
-                Add POOL token to MetaMask
+                close
               </Button>
             </div>
           </motion.div>

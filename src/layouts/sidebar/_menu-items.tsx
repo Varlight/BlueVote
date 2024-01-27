@@ -18,19 +18,11 @@ export const menuItems = [
   {
     name: 'Vote',
     icon: <VoteIcon />,
-    href: routes.vote,
+    href: routes.proposals,
     dropdownItems: [
       {
-        name: 'Explore',
-        href: routes.vote,
-      },
-      {
-        name: 'Vote with pools',
+        name: 'Vote Candidates',
         href: routes.proposals,
-      },
-      {
-        name: 'Create proposal',
-        href: routes.createProposal,
       },
     ],
   },
