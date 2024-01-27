@@ -41,45 +41,45 @@ const ProposalsPage: NextPageWithLayout = () => {
       ),
       path: 'active',
     },
-    {
-      title: (
-        <>
-          Off-Chain{' '}
-          {totalOffChainVote > 0 && (
-            <span className="ltr:ml-0.5 rtl:mr-0.5 ltr:md:ml-1.5 rtl:md:mr-1.5 ltr:lg:ml-2 rtl:lg:mr-2">
-              {totalOffChainVote}
-            </span>
-          )}
-        </>
-      ),
-      path: 'off-chain',
-    },
-    {
-      title: (
-        <>
-          Executable{' '}
-          {totalExecutableVote > 0 && (
-            <span className="ltr:ml-0.5 rtl:mr-0.5 ltr:md:ml-1.5 rtl:md:mr-1.5 ltr:lg:ml-2 rtl:lg:mr-2">
-              {totalExecutableVote}
-            </span>
-          )}
-        </>
-      ),
-      path: 'executable',
-    },
-    {
-      title: (
-        <>
-          Past{' '}
-          {totalPastVote > 0 && (
-            <span className="ltr:ml-0.5 rtl:mr-0.5 ltr:md:ml-1.5 rtl:md:mr-1.5 ltr:lg:ml-2 rtl:lg:mr-2">
-              {totalPastVote}
-            </span>
-          )}
-        </>
-      ),
-      path: 'past',
-    },
+    // {
+    //   title: (
+    //     <>
+    //       Off-Chain{' '}
+    //       {totalOffChainVote > 0 && (
+    //         <span className="ltr:ml-0.5 rtl:mr-0.5 ltr:md:ml-1.5 rtl:md:mr-1.5 ltr:lg:ml-2 rtl:lg:mr-2">
+    //           {totalOffChainVote}
+    //         </span>
+    //       )}
+    //     </>
+    //   ),
+    //   path: 'off-chain',
+    // },
+    // {
+    //   title: (
+    //     <>
+    //       Executable{' '}
+    //       {totalExecutableVote > 0 && (
+    //         <span className="ltr:ml-0.5 rtl:mr-0.5 ltr:md:ml-1.5 rtl:md:mr-1.5 ltr:lg:ml-2 rtl:lg:mr-2">
+    //           {totalExecutableVote}
+    //         </span>
+    //       )}
+    //     </>
+    //   ),
+    //   path: 'executable',
+    // },
+    // {
+    //   title: (
+    //     <>
+    //       Past{' '}
+    //       {totalPastVote > 0 && (
+    //         <span className="ltr:ml-0.5 rtl:mr-0.5 ltr:md:ml-1.5 rtl:md:mr-1.5 ltr:lg:ml-2 rtl:lg:mr-2">
+    //           {totalPastVote}
+    //         </span>
+    //       )}
+    //     </>
+    //   ),
+    //   path: 'past',
+    // },
   ];
   return (
     <>
@@ -113,14 +113,14 @@ const ProposalsPage: NextPageWithLayout = () => {
             </div>
           </div>
           <div className="shrink-0">
-            <Button
+            {/* <Button
               shape="rounded"
               fullWidth={true}
               className="uppercase"
               onClick={() => goToCreateProposalPage()}
             >
               Vote Now
-            </Button>
+            </Button> */}
           </div>
         </header>
         <ParamTab tabMenu={tabMenuItems}>

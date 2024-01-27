@@ -215,22 +215,6 @@ export function Status() {
   );
 }
 
-export function Filters() {
-  return (
-    <>
-      <Collapse label="Status" initialOpen>
-        <Status />
-      </Collapse>
-      <Collapse label="Price Range" initialOpen>
-        <PriceRange />
-      </Collapse>
-      <Collapse label="Collection" initialOpen>
-        <CollectionSelect onSelect={(value) => console.log(value)} />
-      </Collapse>
-    </>
-  );
-}
-
 export default function DrawerFilters() {
   const { closeDrawer } = useDrawer();
   return (
@@ -249,9 +233,7 @@ export default function DrawerFilters() {
         </Button>
       </div>
       <Scrollbar style={{ height: 'calc(100% - 96px)' }}>
-        <div className="px-6 pb-20 pt-1">
-          <Filters />
-        </div>
+        <div className="px-6 pb-20 pt-1">{/* <Filters /> */}</div>
       </Scrollbar>
       <div className="absolute left-0 bottom-4 z-10 w-full px-6">
         <Button fullWidth onClick={closeDrawer}>

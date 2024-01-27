@@ -34,7 +34,7 @@ export default function NftFooter({
           <div className="flex gap-4 pb-3.5 md:pb-4 xl:gap-5">
             <div className="block w-1/2 shrink-0 md:w-2/5">
               <h3 className="mb-1 truncate text-13px font-medium uppercase tracking-wider text-gray-900 dark:text-white sm:mb-1.5 sm:text-sm">
-                Current bid <span className="md:hidden">by</span>{' '}
+                Current Votes <span className="md:hidden">by</span>{' '}
                 <AnchorLink
                   href={currentBid?.authorSlug ?? '#'}
                   className="normal-case text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white md:hidden"
@@ -57,7 +57,7 @@ export default function NftFooter({
             </div>
             <div className="block w-1/2 shrink-0 md:w-3/5">
               <h3 className="mb-1 truncate text-13px font-medium uppercase tracking-wider text-gray-900 dark:text-white sm:mb-1.5 sm:text-sm">
-                Auction ends in
+                Election ends in
               </h3>
               <AuctionCountdown date={auctionTime} />
             </div>

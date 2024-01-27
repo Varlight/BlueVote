@@ -40,7 +40,7 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
     minted_slug,
     price,
     creator,
-    collection,
+    // collection,
     owner,
     block_chains,
   } = product;
@@ -51,13 +51,12 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
         <div className="relative mb-5 flex flex-grow items-center justify-center md:pb-7 md:pt-4 ltr:md:left-0 ltr:md:pl-6 rtl:md:right-0 rtl:md:pr-6 lg:fixed lg:mb-0 lg:h-[calc(100%-96px)] lg:w-[calc(100%-492px)] ltr:lg:pl-8 rtl:lg:pr-8 xl:w-[calc(100%-550px)] ltr:xl:pr-12 ltr:xl:pl-[340px] rtl:xl:pl-12 rtl:xl:pr-[340px] ltr:2xl:pl-96 rtl:2xl:pr-96 3xl:w-[calc(100%-632px)] ltr:4xl:pl-0 rtl:4xl:pr-0">
           <div className="flex h-full max-h-full w-full items-center justify-center lg:max-w-[768px]">
             <div className="relative aspect-square max-h-full overflow-hidden rounded-lg">
-              <Image
-                src={image}
+              {/* <image></image>
+                src='Blue\Blue\src\assets\images\labor-party-logo-political-.png'
                 alt={name}
-                width={768}
-                priority
+                width={768}                
                 className="h-full bg-gray-200 dark:bg-light-dark"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -96,12 +95,12 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
                   <h3 className="text-heading-style mb-2.5 uppercase text-gray-900 dark:text-white">
                     Collection
                   </h3>
-                  <AnchorLink href="#" className="inline-flex">
+                  {/* <AnchorLink href="#" className="inline-flex">
                     <ListCard
                       item={collection}
                       className="rounded-full p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                     />
-                  </AnchorLink>
+                  </AnchorLink> */}
                 </div>
               </div>
             </div>
@@ -189,20 +188,20 @@ export default function NftDetails({ product }: { product: NftDetailsProps }) {
               </ParamTab>
             </div>
           </div>
-          <NftFooter
+          {/* <NftFooter
             className="hidden md:block"
             currentBid={nftData?.bids[nftData?.bids?.length - 1]}
             auctionTime={Date.now() + 4000000 * 10}
             isAuction={isAuction}
             price={price}
-          />
+          /> */}
         </div>
-        <NftFooter
+        {/* <NftFooter
           currentBid={nftData?.bids[nftData?.bids?.length - 1]}
           auctionTime={Date.now() + 4000000 * 10}
           isAuction={isAuction}
           price={price}
-        />
+        /> */}
       </div>
     </div>
   );

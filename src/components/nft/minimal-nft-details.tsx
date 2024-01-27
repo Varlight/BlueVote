@@ -25,7 +25,7 @@ type NftDetailsProps = {
   minted_slug: string;
   price: number;
   creator: Avatar;
-  collection: Avatar;
+  // collection: Avatar;
   owner: Avatar;
   block_chains: Avatar[];
 };
@@ -44,7 +44,7 @@ export default function MinimalNFTDetails({
     minted_slug,
     price,
     creator,
-    collection,
+    // collection,
     owner,
     block_chains,
   } = product;
@@ -81,7 +81,7 @@ export default function MinimalNFTDetails({
                 href={minted_slug}
                 className="mt-1.5 inline-flex items-center text-sm -tracking-wider text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white xl:mt-2.5"
               >
-                Minted on {minted_date}
+                Created on {minted_date}
                 <ArrowLinkIcon className="h-3 w-3 ltr:ml-2 rtl:mr-2" />
               </AnchorLink>
               <div className="mt-4 flex flex-wrap gap-6 pt-0.5 lg:-mx-6 lg:mt-6 lg:gap-0">
@@ -96,7 +96,7 @@ export default function MinimalNFTDetails({
                     />
                   </AnchorLink>
                 </div>
-                <div className="shrink-0 lg:px-6">
+                {/* <div className="shrink-0 lg:px-6">
                   <h3 className="text-heading-style mb-2.5 uppercase text-gray-900 dark:text-white">
                     Collection
                   </h3>
@@ -106,7 +106,7 @@ export default function MinimalNFTDetails({
                       className="rounded-full p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                     />
                   </AnchorLink>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="mt-5 flex flex-col pb-5 xl:mt-9">
@@ -116,14 +116,14 @@ export default function MinimalNFTDetails({
                     title: 'Details',
                     path: 'details',
                   },
-                  {
-                    title: 'Bids',
-                    path: 'bids',
-                  },
-                  {
-                    title: 'History',
-                    path: 'history',
-                  },
+                  // {
+                  //   title: 'Bids',
+                  //   path: 'bids',
+                  // },
+                  // {
+                  //   title: 'History',
+                  //   path: 'history',
+                  // },
                 ]}
               >
                 <TabPanel className="focus:outline-none">
@@ -138,7 +138,7 @@ export default function MinimalNFTDetails({
                     </div>
                     <div className="block">
                       <h3 className="text-heading-style mb-2 uppercase text-gray-900 dark:text-white">
-                        Owner
+                        Leader
                       </h3>
                       <AnchorLink href={owner?.slug} className="inline-block">
                         <ListCard
@@ -147,7 +147,7 @@ export default function MinimalNFTDetails({
                         />
                       </AnchorLink>
                     </div>
-                    <div className="block">
+                    {/* <div className="block">
                       <h3 className="text-heading-style mb-2 uppercase text-gray-900 dark:text-white">
                         Block Chain
                       </h3>
@@ -165,10 +165,10 @@ export default function MinimalNFTDetails({
                           </AnchorLink>
                         ))}
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </TabPanel>
-                <TabPanel className="focus:outline-none">
+                {/* <TabPanel className="focus:outline-none">
                   <div className="flex flex-col-reverse">
                     {nftData?.bids?.map((bid) => (
                       <FeaturedCard
@@ -178,9 +178,9 @@ export default function MinimalNFTDetails({
                       />
                     ))}
                   </div>
-                </TabPanel>
+                </TabPanel> */}
                 <TabPanel className="focus:outline-none">
-                  <div className="flex flex-col-reverse">
+                  {/* <div className="flex flex-col-reverse">
                     {nftData?.history?.map((item) => (
                       <FeaturedCard
                         item={item}
@@ -188,25 +188,25 @@ export default function MinimalNFTDetails({
                         className="mb-3 first:mb-0"
                       />
                     ))}
-                  </div>
+                  </div> */}
                 </TabPanel>
               </ParamTab>
             </div>
           </div>
-          <NftFooter
+          {/* <NftFooter
             className="hidden md:block"
             currentBid={nftData?.bids[nftData?.bids?.length - 1]}
             auctionTime={Date.now() + 4000000 * 10}
             isAuction={isAuction}
             price={price}
-          />
+          /> */}
         </div>
-        <NftFooter
+        {/* <NftFooter
           currentBid={nftData?.bids[nftData?.bids?.length - 1]}
           auctionTime={Date.now() + 4000000 * 10}
           isAuction={isAuction}
           price={price}
-        />
+        /> */}
       </div>
     </div>
   );

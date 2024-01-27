@@ -48,8 +48,9 @@ function RadioGroupOption({ value }: RadioOptionProps) {
     <RadioGroup.Option value={value}>
       {({ checked }) => (
         <span
-          className={`relative flex h-8 cursor-pointer items-center justify-center rounded-lg px-3 text-sm uppercase tracking-wider ${checked ? 'text-white' : 'text-brand dark:text-gray-400'
-            }`}
+          className={`relative flex h-8 cursor-pointer items-center justify-center rounded-lg px-3 text-sm uppercase tracking-wider ${
+            checked ? 'text-white' : 'text-brand dark:text-gray-400'
+          }`}
         >
           {checked && (
             <motion.span
@@ -106,7 +107,10 @@ export default function ComparisonChart() {
                   toggleCoin ? 'flex-row-reverse' : 'flex-row'
                 )}
               >
-                <img src="https://via.placeholder.com/50x50?text=LP" className="w-8 h-8 rounded-full" />
+                <img
+                  src="https://via.placeholder.com/50x50?text=LP"
+                  className="h-8 w-8 rounded-full"
+                />
               </span>
               <span
                 className={cn(
@@ -116,7 +120,7 @@ export default function ComparisonChart() {
               >
                 <span>Liberty Party</span>
               </span>
-              <Button
+              {/* <Button
                 size="mini"
                 color="gray"
                 shape="circle"
@@ -125,7 +129,7 @@ export default function ComparisonChart() {
                 className="rotate-90 border border-gray-100 shadow-[0px_6px_14px_rgba(0,0,0,0.08)]"
               >
                 <SwapIcon className="h-auto w-3" />
-              </Button>
+              </Button> */}
             </span>
           </div>
           <div className="mt-5 flex items-end gap-3 text-base font-medium text-gray-900 dark:text-white sm:text-xl lg:flex-wrap 2xl:flex-nowrap">
@@ -146,8 +150,9 @@ export default function ComparisonChart() {
               )}
             >
               <span
-                className={`inline-flex ltr:mr-2 rtl:ml-2 ${priceDiff > 0 ? '' : 'rotate-180'
-                  }`}
+                className={`inline-flex ltr:mr-2 rtl:ml-2 ${
+                  priceDiff > 0 ? '' : 'rotate-180'
+                }`}
               >
                 <ArrowUp />
               </span>
