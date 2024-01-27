@@ -15,7 +15,7 @@ type LivePriceFeedProps = {
   id: string;
   name: string;
   symbol: string;
-  icon: React.ReactElement;
+  icon: string;
   balance: string;
   usdBalance: string;
   change: string;
@@ -48,7 +48,8 @@ export function LivePriceFeed({
     >
       <div className="w-full flex-col">
         <div className="mb-3 flex items-center">
-          {icon}
+          <img src={icon} className="w-8 h-8 rounded-full" />
+
           <h4 className="text-sm font-medium text-gray-900 ltr:ml-3 rtl:mr-3 dark:text-white">
             {name}
           </h4>
@@ -64,18 +65,16 @@ export function LivePriceFeed({
             className="truncate tracking-tighter text-gray-600 ltr:mr-5 rtl:ml-5 dark:text-gray-400 2xl:w-24 3xl:w-auto"
             title={`${usdBalance} USD`}
           >
-            {usdBalance} USD
+            {usdBalance} Votes
           </span>
 
           <span
-            className={`flex items-center  ${
-              isChangePositive ? 'text-green-500' : 'text-red-500'
-            }`}
+            className={`flex items-center  ${isChangePositive ? 'text-green-500' : 'text-red-500'
+              }`}
           >
             <span
-              className={`ltr:mr-2 rtl:ml-2 ${
-                !isChangePositive ? 'rotate-180' : ''
-              }`}
+              className={`ltr:mr-2 rtl:ml-2 ${!isChangePositive ? 'rotate-180' : ''
+                }`}
             >
               <ArrowUp />
             </span>

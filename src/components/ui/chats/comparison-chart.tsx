@@ -48,9 +48,8 @@ function RadioGroupOption({ value }: RadioOptionProps) {
     <RadioGroup.Option value={value}>
       {({ checked }) => (
         <span
-          className={`relative flex h-8 cursor-pointer items-center justify-center rounded-lg px-3 text-sm uppercase tracking-wider ${
-            checked ? 'text-white' : 'text-brand dark:text-gray-400'
-          }`}
+          className={`relative flex h-8 cursor-pointer items-center justify-center rounded-lg px-3 text-sm uppercase tracking-wider ${checked ? 'text-white' : 'text-brand dark:text-gray-400'
+            }`}
         >
           {checked && (
             <motion.span
@@ -107,8 +106,7 @@ export default function ComparisonChart() {
                   toggleCoin ? 'flex-row-reverse' : 'flex-row'
                 )}
               >
-                <Bitcoin className="h-auto w-7 lg:w-9" />
-                <EthereumDark className="h-auto w-7 lg:w-9" />
+                <img src="https://via.placeholder.com/50x50?text=LP" className="w-8 h-8 rounded-full" />
               </span>
               <span
                 className={cn(
@@ -116,7 +114,7 @@ export default function ComparisonChart() {
                   toggleCoin ? 'flex-row-reverse' : 'flex-row'
                 )}
               >
-                <span>BTCB</span>/<span>ETH</span>
+                <span>Liberty Party</span>
               </span>
               <Button
                 size="mini"
@@ -131,14 +129,14 @@ export default function ComparisonChart() {
             </span>
           </div>
           <div className="mt-5 flex items-end gap-3 text-base font-medium text-gray-900 dark:text-white sm:text-xl lg:flex-wrap 2xl:flex-nowrap">
-            <span className="text-2xl font-semibold xl:text-4xl">{price}</span>
+            <span className="text-2xl font-semibold xl:text-4xl">25983</span>
             <span
               className={cn(
                 'flex items-end',
                 toggleCoin ? 'flex-row-reverse' : 'flex-row'
               )}
             >
-              <span>BTCB</span>/<span>ETH</span>
+              <span>Votes</span>
             </span>
 
             <span
@@ -148,13 +146,12 @@ export default function ComparisonChart() {
               )}
             >
               <span
-                className={`inline-flex ltr:mr-2 rtl:ml-2 ${
-                  priceDiff > 0 ? '' : 'rotate-180'
-                }`}
+                className={`inline-flex ltr:mr-2 rtl:ml-2 ${priceDiff > 0 ? '' : 'rotate-180'
+                  }`}
               >
                 <ArrowUp />
               </span>
-              {priceDiff} ({percentage})
+              25000 ({percentage})
             </span>
           </div>
           <div className="mt-6 flex items-center gap-1.5 text-xs font-medium text-gray-600 dark:text-gray-400 sm:text-sm">

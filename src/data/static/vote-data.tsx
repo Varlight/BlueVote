@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 export const cripticVotes = [
   {
     id: '1',
-    title: 'PTIP 50 - Treasury Assets Management #1',
+    title: 'Liberty Party',
     accepted: {
       vote: 10303,
       percentage: 90,
@@ -123,7 +123,7 @@ export const cripticVotes = [
   },
   {
     id: '2',
-    title: 'PTIP 51 - Retroactive Proxy Contract Airdrop — Phase One',
+    title: 'Freedom Party',
     accepted: {
       vote: 303,
       percentage: 30,
@@ -243,7 +243,7 @@ export const cripticVotes = [
   },
   {
     id: '3',
-    title: 'PTIP 52 - Reduce the UNI proposal submission threshold to 2.5M',
+    title: 'Unity Alliance',
     accepted: {
       vote: 7303,
       percentage: 87,
@@ -363,7 +363,7 @@ export const cripticVotes = [
   },
   {
     id: '4',
-    title: 'PTIP 53 - Community-Enabled Analytics',
+    title: 'Equality Front',
     accepted: {
       vote: 9303,
       percentage: 90,
@@ -483,7 +483,7 @@ export const cripticVotes = [
   },
   {
     id: '5',
-    title: 'PTIP 61 - Stake XRP Earn Cake Syrup Pool',
+    title: 'Equality Front',
     accepted: {
       vote: 10303,
       percentage: 90,
@@ -603,7 +603,7 @@ export const cripticVotes = [
   },
   {
     id: '6',
-    title: 'PTIP 63 - Claim Rewards from Locked Staking',
+    title: 'Innovation Party',
     accepted: {
       vote: 1003,
       percentage: 90,

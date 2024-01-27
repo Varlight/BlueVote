@@ -21,19 +21,19 @@ export default function Logo() {
         pathname: routes.home,
         ...(layout !== LAYOUT_OPTIONS.MODERN &&
           layout !== undefined && {
-            query: {
-              layout,
-            },
-          }),
+          query: {
+            layout,
+          },
+        }),
       }}
       className="flex w-28 outline-none sm:w-32 4xl:w-36"
     >
       <span className="relative flex overflow-hidden">
         {isMounted && isDarkMode && (
-          <Image src={darkLogo} alt="Criptic" height={24} priority />
+          <h1 style={{ color: "white", fontWeight: "bold" }}>Blue</h1>
         )}
         {isMounted && !isDarkMode && (
-          <Image src={lightLogo} alt="Criptic" height={24} priority />
+          <h1 style={{ color: "blue", fontWeight: "bold" }}>Blue</h1>
         )}
       </span>
     </AnchorLink>

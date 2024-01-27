@@ -18,7 +18,7 @@ function VoteActionButton() {
   return (
     <div className="mt-4 flex items-center gap-3 xs:mt-6 xs:inline-flex md:mt-10">
       <Button shape="rounded" color="success" className="flex-1 xs:flex-auto">
-        Accept
+        Vote
       </Button>
       <Button shape="rounded" color="danger" className="flex-1 xs:flex-auto">
         Reject
@@ -56,7 +56,7 @@ export default function VoteDetailsCard({ vote }: any) {
             {vote.title}
           </h3>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Proposal #{vote.id}
+            Country ID {vote.id}
           </p>
 
           {/* show only when vote is active */}

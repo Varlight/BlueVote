@@ -25,27 +25,61 @@ const COLUMNS = [
     maxWidth: 80,
   },
   {
-    Header: 'Type',
-    accessor: 'transactionType',
+    Header: 'Candidate Name',
+    accessor: 'candidateName',
     minWidth: 60,
     maxWidth: 80,
   },
+
+
   {
-    Header: () => <div className="ltr:ml-auto rtl:mr-auto">Date</div>,
-    accessor: 'createdAt',
+    Header: () => <div className="ltr:ml-auto rtl:mr-auto">party</div>,
+    accessor: 'party',
     // @ts-ignore
     Cell: ({ cell: { value } }) => (
       <div className="ltr:text-right rtl:text-left">{value}</div>
     ),
-    minWidth: 160,
-    maxWidth: 220,
+    minWidth: 80,
+    maxWidth: 120,
   },
   {
-    Header: () => <div className="ltr:ml-auto rtl:mr-auto">Asset</div>,
-    accessor: 'symbol',
+    Header: () => <div className="ltr:ml-auto rtl:mr-auto">Age</div>,
+    accessor: 'age',
     // @ts-ignore
     Cell: ({ cell: { value } }) => (
       <div className="ltr:text-right rtl:text-left">{value}</div>
+    ),
+    minWidth: 80,
+    maxWidth: 120,
+  },
+  {
+    Header: () => <div className="ltr:ml-auto rtl:mr-auto">Education</div>,
+    accessor: 'education',
+    // @ts-ignore
+    Cell: ({ cell: { value } }) => (
+      <div className="ltr:text-right rtl:text-left">{value}</div>
+    ),
+    minWidth: 80,
+    maxWidth: 120,
+  },
+  {
+    Header: () => <div className="ltr:ml-auto rtl:mr-auto">Experience</div>,
+    accessor: 'experience',
+    // @ts-ignore
+    Cell: ({ cell: { value } }) => (
+      <div className="ltr:text-right rtl:text-left">{value}</div>
+    ),
+    minWidth: 220,
+    maxWidth: 280,
+  },
+  {
+    Header: () => <div className="ltr:ml-auto rtl:mr-auto">Vote Count</div>,
+    accessor: 'voteCount',
+    // @ts-ignore
+    Cell: ({ cell: { value } }) => (
+      <div className="flex items-center justify-end">
+        <LinkIcon className="h-[18px] w-[18px] ltr:mr-2 rtl:ml-2" /> {value}
+      </div>
     ),
     minWidth: 80,
     maxWidth: 120,
@@ -60,38 +94,7 @@ const COLUMNS = [
     minWidth: 100,
     maxWidth: 180,
   },
-  {
-    Header: () => <div className="ltr:ml-auto rtl:mr-auto">Address</div>,
-    accessor: 'address',
-    // @ts-ignore
-    Cell: ({ cell: { value } }) => (
-      <div className="flex items-center justify-end">
-        <LinkIcon className="h-[18px] w-[18px] ltr:mr-2 rtl:ml-2" /> {value}
-      </div>
-    ),
-    minWidth: 220,
-    maxWidth: 280,
-  },
-  {
-    Header: () => <div className="ltr:ml-auto rtl:mr-auto">Amount</div>,
-    accessor: 'amount',
-    // @ts-ignore
-    Cell: ({ cell: { value } }) => (
-      <div className="-tracking-[1px] ltr:text-right rtl:text-left">
-        <strong className="mb-0.5 flex justify-end text-base md:mb-1.5 md:text-lg lg:text-base 3xl:text-2xl">
-          {value.balance}
-          <span className="inline-block ltr:ml-1.5 rtl:mr-1.5 md:ltr:ml-2 md:rtl:mr-2">
-            BTC
-          </span>
-        </strong>
-        <span className="text-gray-600 dark:text-gray-400">
-          ${value.usdBalance}
-        </span>
-      </div>
-    ),
-    minWidth: 200,
-    maxWidth: 300,
-  },
+
 ];
 
 export default function TransactionTable() {
@@ -130,7 +133,7 @@ export default function TransactionTable() {
       <div className="rounded-tl-lg rounded-tr-lg bg-white px-4 pt-6 dark:bg-light-dark md:px-8 md:pt-8">
         <div className="flex flex-col items-center justify-between border-b border-dashed border-gray-200 pb-5 dark:border-gray-700 md:flex-row">
           <h2 className="mb-3 shrink-0 text-lg font-medium uppercase text-black dark:text-white sm:text-xl md:mb-0 md:text-2xl">
-            Transaction History
+            Voting History
           </h2>
         </div>
       </div>
@@ -157,9 +160,8 @@ export default function TransactionTable() {
                           {column.canResize && (
                             <div
                               {...column.getResizerProps()}
-                              className={`resizer ${
-                                column.isResizing ? 'isResizing' : ''
-                              }`}
+                              className={`resizer ${column.isResizing ? 'isResizing' : ''
+                                }`}
                             />
                           )}
                           <span className="ltr:ml-1 rtl:mr-1">

@@ -7,7 +7,7 @@ import { walletCurrencies } from '@/data/static/wallet-currencies';
 
 const data = [
   {
-    name: 'Bitcoin',
+    name: 'LIBERTY PARTY',
     value: 400,
     volume: '+12.5%',
     isChangePositive: true,
@@ -37,7 +37,8 @@ export default function WalletCard() {
   const [percentage, setPercentage] = useState(data[0].volume);
   return (
     <div className="rounded-lg bg-white p-6 shadow-card dark:bg-light-dark sm:p-8">
-      <h3 className="mb-6 text-base font-medium uppercase">Wallet</h3>
+      <h3 className="mb-6 text-base font-medium uppercase">Vote Difference
+      </h3>
 
       <div className="relative flex h-[290px] justify-center">
         <ResponsiveContainer width={290} height="100%">
@@ -90,8 +91,9 @@ export default function WalletCard() {
 
       <div className="mt-20">
         <div className="mb-5 flex items-center justify-between text-sm font-medium text-gray-400">
-          <span>Coin Name</span>
-          <span>Volume</span>
+          <span>Party Name</span>
+          <span>Code</span>
+          <span>Vote Difference</span>
         </div>
         <ul className="grid gap-5">
           {walletCurrencies.map((currency) => (
@@ -100,8 +102,8 @@ export default function WalletCard() {
               className="grid grid-cols-[150px_repeat(2,1fr)] items-center justify-between text-sm font-medium text-gray-900 dark:text-white 2xl:grid-cols-[140px_repeat(2,1fr)] 3xl:grid-cols-[150px_repeat(2,1fr)]"
             >
               <span className="flex items-center gap-2.5 whitespace-nowrap">
-                {currency.icon}
-                {currency.name}
+                <img src={currency.icon} alt={`${currency.party} Icon`} className="w-8 h-8 rounded-full" />
+                {currency.party}
               </span>
               <span className="text-center">{currency.code}</span>
               <span
@@ -117,7 +119,7 @@ export default function WalletCard() {
                 >
                   <ArrowUp />
                 </span>
-                {currency.volume}
+                {currency.leadingVotesDifference}
               </span>
             </li>
           ))}

@@ -105,10 +105,10 @@ const ProposalsPage: NextPageWithLayout = () => {
             </div>
             <div>
               <h2 className="mb-2 text-base font-medium uppercase dark:text-gray-100 xl:text-lg">
-                You have 100 votes
+                You have 1 vote
               </h2>
               <p className="leading-relaxed text-gray-600 dark:text-gray-400">
-                You need CRIPTIC or CRIPTIC tokens to participate in governance.
+                You need cosVM tokens to participate in governance.
               </p>
             </div>
           </div>
@@ -119,7 +119,7 @@ const ProposalsPage: NextPageWithLayout = () => {
               className="uppercase"
               onClick={() => goToCreateProposalPage()}
             >
-              Create Proposal
+              Vote Now
             </Button>
           </div>
         </header>

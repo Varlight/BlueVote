@@ -52,7 +52,7 @@ export default function Header({ className }: { className?: string }) {
             onClick={() => router.push(routes.home)}
             className="flex items-center xl:hidden"
           >
-            <LogoIcon />
+            <h1 style={{ color: "blue", fontWeight: "bold" }}>Blue</h1>
           </div>
           <div className="mx-2 block sm:mx-4 xl:hidden">
             <Hamburger

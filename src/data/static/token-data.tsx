@@ -1,85 +1,29 @@
-import { Bitcoin } from '@/components/icons/bitcoin';
-import { Ethereum } from '@/components/icons/ethereum';
-import { Tether } from '@/components/icons/tether';
-import { Bnb } from '@/components/icons/bnb';
-import { Usdc } from '@/components/icons/usdc';
-import { Cardano } from '@/components/icons/cardano';
-import { Doge } from '@/components/icons/doge';
 
-export const TopTokensData = [
-  {
-    icon: <Bitcoin />,
-    code: 'BTC',
-    name: 'Bitcoin',
-    volume: '256.5M',
-  },
-  {
-    icon: <Ethereum />,
-    code: 'ETH',
-    name: 'Ethereum',
-    volume: '740.7M',
-  },
-  {
-    icon: <Tether />,
-    code: 'USDT',
-    name: 'Tether USD',
-    volume: '566.2M',
-  },
-  {
-    icon: <Bnb />,
-    code: 'BNB',
-    name: 'Binance Coin',
-    volume: '396.4M',
-  },
-  {
-    icon: <Usdc />,
-    code: 'USDC',
-    name: 'USD Coin',
-    volume: '145.1M',
-  },
-  {
-    icon: <Cardano />,
-    code: 'ADA',
-    name: 'Cardano',
-    volume: '267.3M',
-  },
-  {
-    icon: <Doge />,
-    code: 'DOGE',
-    name: 'Doge Coin',
-    volume: '421.9M',
-  },
-];
 
-export const TopPoolsData = [
-  {
-    from: 'BTC',
-    to: 'USDC',
-    volume: '434.2M',
+export const PartyVotesData = {
+  'Liberty Party': {
+    voteCount: 1200,
+    icon: 'https://via.placeholder.com/50x50?text=LP',
   },
-  {
-    from: 'USDT',
-    to: 'DOGE',
-    volume: '356.4M',
+  'Progressive Coalition': {
+    voteCount: 950,
+    icon: 'https://via.placeholder.com/50x50?text=PC',
   },
-  {
-    from: 'ADA',
-    to: 'BNB',
-    volume: '295.6M',
+  'Unity Alliance': {
+    voteCount: 800,
+    icon: 'https://via.placeholder.com/50x50?text=UA',
   },
-  {
-    from: 'USDT',
-    to: 'USDC',
-    volume: '402.5M',
+  'Harmony Alliance': {
+    voteCount: 850,
+    icon: 'https://via.placeholder.com/50x50?text=HA',
   },
-  {
-    from: 'ETH',
-    to: 'DOGE',
-    volume: '590.2M',
+  'Equality Front': {
+    voteCount: 780,
+    icon: 'https://via.placeholder.com/50x50?text=EF',
   },
-  {
-    from: 'BTC',
-    to: 'ADA',
-    volume: '104.6M',
+  'Future Vision Party': {
+    voteCount: 1050,
+    icon: 'https://via.placeholder.com/50x50?text=FVP',
   },
-];
+};
+
