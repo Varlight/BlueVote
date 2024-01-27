@@ -38,8 +38,8 @@ export default function MinimalScreen() {
   return (
     <>
       <NextSeo
-        title="Criptic Minimal"
-        description="Criptic - React Next Web3 NFT Crypto Dashboard Template"
+        title="Blue - Blockchain Voting Machine"
+        description="Blockchain Voting Machine"
       />
       <div className="">
         <PriceFeedSlider
@@ -63,7 +63,7 @@ export default function MinimalScreen() {
                   <button
                     className="mb-7 text-center font-medium tracking-tighter text-gray-900 dark:text-white xl:text-2xl 3xl:mb-8 3xl:text-[32px] bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full"
                     onClick={() => {
-                      router.push('/vote');
+                      router.push('/proposals?layout=Minimal');
                     }}
                   >
                     Vote For 2024

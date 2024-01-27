@@ -18,7 +18,7 @@ export default function ModernScreen() {
   return (
     <>
       <NextSeo
-        title="Criptic"
+        title="Blue - Blockchain Voting Machine"
         description="Criptic - React Next Web3 NFT Crypto Dashboard Template"
       />
       <div className="flex flex-wrap">
