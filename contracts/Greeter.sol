@@ -1,5 +1,14 @@
-//SPDX-License-Identifier: Unlicense
+// SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
+
+// Import the ERC-20 token interface
+interface IERC20 {
+    function transferFrom(
+        address sender,
+        address recipient,
+        uint256 amount
+    ) external returns (bool);
+}
 
 contract VotingSystem {
     // Declaration of state variables
@@ -10,6 +19,9 @@ contract VotingSystem {
     mapping(address => bool) public isRegistered;
     mapping(address => bool) public hasVoted;
     mapping(uint256 => uint256) public voteCount;
+
+    // Address of the ERC-20 token contract for CVM (set to the zero address as it's not a custom contract)
+    address public tokenAddress = address(0);
 
     // Events for logging important actions on the blockchain
     event VoterRegistered(address indexed voter);
@@ -62,10 +74,16 @@ contract VotingSystem {
         emit CandidateAdded(candidateId, candidateName);
     }
 
-    // Function to allow voters to cast their votes
+    // Function to allow voters to cast their votes with a token fee
     function vote(uint256 candidate) external hasNotVoted isRegisteredVoter {
         // Ensure the candidate exists
         require(candidate > 0 && voteCount[candidate] > 0, 'Invalid candidate');
+
+        // Transfer 1 CVM token from the user to the contract
+        require(
+            IERC20(tokenAddress).transferFrom(msg.sender, address(this), 1),
+            'Token transfer failed'
+        );
 
         // Record the vote
         voteCount[candidate]++;

@@ -15,9 +15,14 @@ import { useLayout } from '@/lib/hooks/use-layout';
 import { LAYOUT_OPTIONS } from '@/lib/constants';
 import { ethers } from 'ethers';
 import axios from 'axios';
+import { useRouter } from 'next/router';
+import { error } from 'console';
+import { toast } from 'react-toastify';
 
-function VoteActionButton() {
 
+function VoteActionButton({ setIsCardVisible }) {
+
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [contract, setContract] = useState(null);
   const [signer, setSigner] = useState(null);
@@ -47,57 +52,54 @@ function VoteActionButton() {
 
   const handleVoteClick = async () => {
     try {
+      // Send PUT request to backend API using Axios
+      const metamaskID = await signer.getAddress();
+      await axios.put("http://localhost:3001/vote", {
+        metamaskID
+      });
+
       setIsLoading(true);
 
-      // Check if the contract and signer are available
-      if (contract && signer) {
-        // Call the vote function on the smart contract
-        const transaction = await contract.vote(1); // Replace 1 with the candidate ID you want to vote for
+      // Check if the contract, signer, and tokenContractAddress are available
+      if (contract && signer && contractAdress) {
+        // Send 1 ETH to the smart contract
+        const transaction = await contract.vote(1);
 
         // Wait for the transaction to be mined
         await transaction.wait();
 
         console.log('Vote successful!');
 
-        // Send POST request to backend API using Axios
-        const walletAddress = await signer.getAddress();
-        await axios.post("http://localhost:3001/markAsVoted", {
-          walletAddress,
-          isVoted: true,
-        });
+        // Transfer 1 token from the separate ERC-20 token contract to the smart contract
+        const tokenContract = new ethers.Contract(
+          contractAdress,
+          ['function transfer(address to, uint256 amount) external'],
+          signer
+        );
+
+        await tokenContract.transfer(contract.address, 1);
 
         // Set voted to true to conditionally render the component
         setVoted(true);
+        router.push("/");
       } else {
-        console.error('Contract or signer not available.');
+        console.error('Contract, signer, or tokenContractAddress not available.');
       }
     } catch (error) {
-      console.error('Error voting:', error.message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+      // Handle error from the backend API
+      if (error.response && error.response.status === 400) {
+        console.log('User has already voted. Blocking voting polls.');
 
-  const handleRejectClick = async () => {
-    try {
-      setIsLoading(true);
+        // Show a Snackbar message using react-toastify
+        alert('You have already voted.');
+        router.push("/?layout=Minimal");
 
-      // Check if the contract and signer are available
-      if (contract && signer) {
-        // Call the reject function on the smart contract
-        const transaction = await contract.reject();
 
-        // Wait for the transaction to be mined
-        await transaction.wait();
-
-        console.log('Reject successful!');
+        // Implement logic to block voting polls
+        // For example, you can set a state variable to disable voting buttons
       } else {
-        console.error('Contract or signer not available.');
+        console.error('Error voting:', error.message);
       }
-    } catch (error) {
-      console.error('Error rejecting:', error.message);
-    } finally {
-      setIsLoading(false);
     }
   };
 
