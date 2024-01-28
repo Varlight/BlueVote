@@ -1,4 +1,4 @@
-import SingleNft from '@/assets/images/labor-party-logo-political-.png';
+import SingleNft from '@/assets/images/nft/nft-1.jpg';
 
 import Bitcoin from '@/assets/images/currency/bitcoin.svg';
 import Ethereum from '@/assets/images/currency/ethereum.svg';
@@ -11,16 +11,16 @@ import Avatar6 from '@/assets/images/avatar/6.png';
 
 export const nftData = {
   isAuction: true,
-  name: 'Labour Party',
+  name: 'Rachel Wu',
   image: SingleNft,
   minted_date: 'Jan 26, 1988',
   minted_slug: '',
   price: 0.2,
   description:
-    'Fisherian Runaways, Child of #48 Bat Veil & #42 Screw Nose. This mushroom is the result of the cross-breeding of two original one of a kind generative mushrooms donated back to the Fisherian Runaways project their generous owner.',
-  creator: { id: 1, logo: Avatar1, name: '@ElonMusk', slug: '#' },
+    'The Labour Alliance Party is a progressive political movement dedicated to championing the rights and welfare of the working class, fostering social justice, and promoting economic prosperity for all. Grounded in the principles of solidarity, equality, and opportunity, our party seeks to create a society where every individual can thrive and contribute to the common good.',
+  creator: { id: 1, logo: Avatar1, name: 'Labour Party', slug: '#' },
   // collection: { id: 1, logo: Avatar3, name: 'Criptic', slug: '#' },
-  owner: { id: 1, logo: Avatar4, name: '@Elon Musk', slug: '#' },
+  owner: { id: 1, logo: Avatar4, name: '@Rachel', slug: '#' },
   block_chains: [
     { id: 1, logo: Bitcoin, name: 'Ethereum', slug: '#' },
     { id: 2, logo: Ethereum, name: 'Bitcoin', slug: '#' },

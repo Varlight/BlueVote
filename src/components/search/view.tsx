@@ -28,49 +28,49 @@ type SearchFromProps = {
 
 const tags = [
   {
-    label: 'illustration',
+    label: 'Rachel',
     link: '#',
   },
   {
-    label: '3d',
+    label: 'Bush',
     link: '#',
   },
   {
-    label: 'animation',
+    label: 'Gabriel',
     link: '#',
   },
   {
-    label: 'digital',
+    label: 'Josh Fawely',
     link: '#',
   },
-  {
-    label: 'fanart',
-    link: '#',
-  },
-  {
-    label: 'concept',
-    link: '#',
-  },
-  {
-    label: 'sports',
-    link: '#',
-  },
-  {
-    label: 'fantasy',
-    link: '#',
-  },
-  {
-    label: 'abstract',
-    link: '#',
-  },
-  {
-    label: 'colorful',
-    link: '#',
-  },
-  {
-    label: 'modern',
-    link: '#',
-  },
+  // {
+  //   label: 'fanart',
+  //   link: '#',
+  // },
+  // {
+  //   label: 'concept',
+  //   link: '#',
+  // },
+  // {
+  //   label: 'sports',
+  //   link: '#',
+  // },
+  // {
+  //   label: 'fantasy',
+  //   link: '#',
+  // },
+  // {
+  //   label: 'abstract',
+  //   link: '#',
+  // },
+  // {
+  //   label: 'colorful',
+  //   link: '#',
+  // },
+  // {
+  //   label: 'modern',
+  //   link: '#',
+  // },
 ];
 
 export function SearchFrom({ placeholder = 'Search...' }: SearchFromProps) {
@@ -117,7 +117,7 @@ export function SearchFrom({ placeholder = 'Search...' }: SearchFromProps) {
       >
         <div className="absolute left-0 top-full mt-3.5 w-full rounded-lg bg-white p-5 shadow-large dark:bg-light-dark xs:mt-4 xs:p-6">
           <h3 className="mb-2 text-sm font-medium tracking-tighter text-gray-900 dark:text-white xs:mb-2.5 xs:text-base">
-            Tags
+            Popular
           </h3>
 
           {tags.map((tag, index) => (

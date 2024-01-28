@@ -120,7 +120,7 @@ export default function ComparisonChart() {
               >
                 <span>Liberty Party</span>
               </span>
-              {/* <Button
+              <Button
                 size="mini"
                 color="gray"
                 shape="circle"
@@ -129,7 +129,7 @@ export default function ComparisonChart() {
                 className="rotate-90 border border-gray-100 shadow-[0px_6px_14px_rgba(0,0,0,0.08)]"
               >
                 <SwapIcon className="h-auto w-3" />
-              </Button> */}
+              </Button>
             </span>
           </div>
           <div className="mt-5 flex items-end gap-3 text-base font-medium text-gray-900 dark:text-white sm:text-xl lg:flex-wrap 2xl:flex-nowrap">

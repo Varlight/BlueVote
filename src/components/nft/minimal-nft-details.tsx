@@ -6,9 +6,10 @@ import ListCard from '@/components/ui/list-card';
 import AnchorLink from '@/components/ui/links/anchor-link';
 import { ArrowLinkIcon } from '@/components/icons/arrow-link-icon';
 import { nftData } from '@/data/static/single-nft';
-import NftDropDown from '@/components/nft/nft-dropdown';
+// import NftDropDown from '@/components/nft/nft-dropdown';
 import Avatar from '@/components/ui/avatar';
 import NftFooter from '@/components/nft/nft-footer';
+import { useRouter } from 'next/router';
 
 type Avatar = {
   id: string | number;
@@ -48,6 +49,7 @@ export default function MinimalNFTDetails({
     owner,
     block_chains,
   } = product;
+  const router = useRouter();
 
   return (
     <div className="flex flex-grow">
@@ -73,21 +75,21 @@ export default function MinimalNFTDetails({
                 <h2 className="text-xl font-medium leading-[1.45em] -tracking-wider text-gray-900 dark:text-white md:text-2xl xl:text-3xl">
                   {name}
                 </h2>
-                <div className="mt-1.5 shrink-0 ltr:ml-3 rtl:mr-3 xl:mt-2">
+                {/* <div className="mt-1.5 shrink-0 ltr:ml-3 rtl:mr-3 xl:mt-2">
                   <NftDropDown />
-                </div>
+                </div> */}
               </div>
               <AnchorLink
                 href={minted_slug}
                 className="mt-1.5 inline-flex items-center text-sm -tracking-wider text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white xl:mt-2.5"
               >
-                Created on {minted_date}
+                Joined on {minted_date}
                 <ArrowLinkIcon className="h-3 w-3 ltr:ml-2 rtl:mr-2" />
               </AnchorLink>
               <div className="mt-4 flex flex-wrap gap-6 pt-0.5 lg:-mx-6 lg:mt-6 lg:gap-0">
                 <div className="shrink-0 border-dashed border-gray-200 dark:border-gray-700 lg:px-6 lg:ltr:border-r lg:rtl:border-l">
                   <h3 className="text-heading-style mb-2 uppercase text-gray-900 dark:text-white">
-                    Created By
+                    Belongs to
                   </h3>
                   <AnchorLink href={creator?.slug} className="inline-flex">
                     <ListCard
@@ -146,6 +148,18 @@ export default function MinimalNFTDetails({
                           className="rounded-full p-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                         />
                       </AnchorLink>
+                      <div className="mt-3">
+                        {' '}
+                        {/* Adjust margin here */}
+                        <button
+                          className="rounded-full bg-blue-500 py-2 px-4 text-center font-medium tracking-tighter text-gray-900 text-white hover:bg-blue-600 dark:text-white xl:text-2xl 3xl:mb-8 3xl:text-[32px]"
+                          onClick={() => {
+                            router.push('/proposals?layout=Minimal');
+                          }}
+                        >
+                          Vote For 2024
+                        </button>
+                      </div>
                     </div>
                     {/* <div className="block">
                       <h3 className="text-heading-style mb-2 uppercase text-gray-900 dark:text-white">

@@ -2,8 +2,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const cripticVotes = [
   {
-    id: '1',
-    title: 'Liberty Party',
+    id: 'Labour Party',
+    title: 'Rachel Wu',
     accepted: {
       vote: 10303,
       percentage: 90,
@@ -71,12 +71,11 @@ export const cripticVotes = [
       },
     ],
     description: `
-      <h6>Simple Summary</h6>
-      <p>Extend POOL drip for UNI, COMP, Dai, USDC, and SUSHI Ethereum pools until the end of October. Extend prizes and drip for the POOL pool as well.</p>
-      <h6>Motivation</h6>
-      <p>The POOL drips for most Ethereum pools will be ending within the next 2 weeks (see details here). This proposal serves to maintain the statusquo of POOL incentives on Ethereum. However, it only extends the status quo for a relatively short amount of additional time. This is becausethe V4 prize pool will be launching in mid October and a larger incentive overhaul will be.</p>
-      <h6>Where Can I get Some?</h6>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+      <h6>Vision and Goals</h6>
+      <p>Rachel Wu's vision and goals are focused on fostering inclusive communities, promoting sustainable development, and advocating for social equity. She aims to create environments where diversity is embraced, and all individuals have equal access to opportunities for growth and contribution. Rachel's efforts to address systemic inequalities are reflected in her grassroots initiatives and advocacy work, which prioritize amplifying the voices of marginalized groups and addressing societal disparities. She emphasizes transparency, accountability, and inclusive decision-making in governance, striving to engage constituents in the policy-making process to better reflect their needs and aspirations. Rachel's overarching goal is to promote economic growth while prioritizing environmental sustainability, aiming to ensure a legacy of prosperity for future generations. Through collaboration and innovation, she seeks to bridge divides and foster unity, working towards tangible progress and positive change in society.</p>
+       
+       
+       
     `,
     action: [
       {
@@ -123,7 +122,7 @@ export const cripticVotes = [
   },
   {
     id: '2',
-    title: 'Freedom Party',
+    title: 'George',
     accepted: {
       vote: 303,
       percentage: 30,
@@ -191,12 +190,11 @@ export const cripticVotes = [
       },
     ],
     description: `
-      <h6>Simple Summary</h6>
+      <h6>Vision and Goals</h6>
       <p>Extend POOL drip for UNI, COMP, Dai, USDC, and SUSHI Ethereum pools until the end of October. Extend prizes and drip for the POOL pool as well.</p>
-      <h6>Motivation</h6>
-      <p>The POOL drips for most Ethereum pools will be ending within the next 2 weeks (see details here). This proposal serves to maintain the statusquo of POOL incentives on Ethereum. However, it only extends the status quo for a relatively short amount of additional time. This is becausethe V4 prize pool will be launching in mid October and a larger incentive overhaul will be.</p>
-      <h6>Where Can I get Some?</h6>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+       
+       
+       
     `,
     action: [
       {
@@ -311,12 +309,11 @@ export const cripticVotes = [
       },
     ],
     description: `
-      <h6>Simple Summary</h6>
+      <h6>Vision and Goals</h6>
       <p>Extend POOL drip for UNI, COMP, Dai, USDC, and SUSHI Ethereum pools until the end of October. Extend prizes and drip for the POOL pool as well.</p>
-      <h6>Motivation</h6>
-      <p>The POOL drips for most Ethereum pools will be ending within the next 2 weeks (see details here). This proposal serves to maintain the statusquo of POOL incentives on Ethereum. However, it only extends the status quo for a relatively short amount of additional time. This is becausethe V4 prize pool will be launching in mid October and a larger incentive overhaul will be.</p>
-      <h6>Where Can I get Some?</h6>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+       
+       
+       
     `,
     action: [
       {
@@ -363,7 +360,7 @@ export const cripticVotes = [
   },
   {
     id: '4',
-    title: 'Equality Front',
+    title: 'George Bush',
     accepted: {
       vote: 9303,
       percentage: 90,
@@ -431,12 +428,11 @@ export const cripticVotes = [
       },
     ],
     description: `
-      <h6>Simple Summary</h6>
+      <h6>Vision and Goals</h6>
       <p>Extend POOL drip for UNI, COMP, Dai, USDC, and SUSHI Ethereum pools until the end of October. Extend prizes and drip for the POOL pool as well.</p>
-      <h6>Motivation</h6>
-      <p>The POOL drips for most Ethereum pools will be ending within the next 2 weeks (see details here). This proposal serves to maintain the statusquo of POOL incentives on Ethereum. However, it only extends the status quo for a relatively short amount of additional time. This is becausethe V4 prize pool will be launching in mid October and a larger incentive overhaul will be.</p>
-      <h6>Where Can I get Some?</h6>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+       
+       
+       
     `,
     action: [
       {
@@ -482,8 +478,8 @@ export const cripticVotes = [
     ],
   },
   {
-    id: '5',
-    title: 'Equality Front',
+    id: 'Liberty Party',
+    title: 'George Bush',
     accepted: {
       vote: 10303,
       percentage: 90,
@@ -551,12 +547,13 @@ export const cripticVotes = [
       },
     ],
     description: `
-      <h6>Simple Summary</h6>
-      <p>Extend POOL drip for UNI, COMP, Dai, USDC, and SUSHI Ethereum pools until the end of October. Extend prizes and drip for the POOL pool as well.</p>
-      <h6>Motivation</h6>
-      <p>The POOL drips for most Ethereum pools will be ending within the next 2 weeks (see details here). This proposal serves to maintain the statusquo of POOL incentives on Ethereum. However, it only extends the status quo for a relatively short amount of additional time. This is becausethe V4 prize pool will be launching in mid October and a larger incentive overhaul will be.</p>
-      <h6>Where Can I get Some?</h6>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+      <h6>Vision and Goals</h6>
+      <p>George Bush is a principled leader deeply committed to serving his country with integrity and dedication. With a background in public service and a strong sense of duty, George brings a wealth of experience and a genuine desire to make a positive impact on society.
+      Having served in various roles within the community and government, George has demonstrated a steadfast commitment to upholding democratic values and promoting the welfare of his fellow citizens. Through his leadership, George has advocated for policies that prioritize the well-being and prosperity of all Americans.
+      He promises to prioritize economic growth and job creation, ensuring that opportunities for success are accessible to all Americans. Through collaboration and empathy, George is committed to building bridges across divides and fostering unity, striving to create a brighter and more prosperous future for generations to come.</p>
+       
+       
+       
     `,
     action: [
       {
@@ -602,8 +599,8 @@ export const cripticVotes = [
     ],
   },
   {
-    id: '6',
-    title: 'Innovation Party',
+    id: 'Equality Front',
+    title: 'Maduro Gabriel',
     accepted: {
       vote: 1003,
       percentage: 90,
@@ -671,12 +668,12 @@ export const cripticVotes = [
       },
     ],
     description: `
-      <h6>Simple Summary</h6>
-      <p>Extend POOL drip for UNI, COMP, Dai, USDC, and SUSHI Ethereum pools until the end of October. Extend prizes and drip for the POOL pool as well.</p>
-      <h6>Motivation</h6>
-      <p>The POOL drips for most Ethereum pools will be ending within the next 2 weeks (see details here). This proposal serves to maintain the statusquo of POOL incentives on Ethereum. However, it only extends the status quo for a relatively short amount of additional time. This is becausethe V4 prize pool will be launching in mid October and a larger incentive overhaul will be.</p>
-      <h6>Where Can I get Some?</h6>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+      <h6>Vision and Goals</h6>
+      <p>Madaro Gabriel is a visionary leader known for his unwavering commitment to progress and innovation. Born and raised in a small town, Madaro's humble beginnings have shaped his perspective and fueled his drive to make a difference in the world. With a keen intellect and a compassionate heart, Madaro is dedicated to uplifting communities and empowering individuals from all walks of life.
+      Madaro promises to continue championing causes that promote equality, justice, and environmental stewardship. With a focus on innovation and collaboration, he aims to harness the power of technology and entrepreneurship to create opportunities for marginalized communities and drive sustainable development. Madaro is committed to fostering dialogue, building bridges, and fostering a culture of empathy and understanding. His vision for the future is one of hope, resilience, and shared prosperity, where every individual has the opportunity to thrive and contribute to a brighter tomorrow.</p>
+       
+       
+       
     `,
     action: [
       {
@@ -722,8 +719,8 @@ export const cripticVotes = [
     ],
   },
   {
-    id: '7',
-    title: 'PTIP 64 - Loan and/or fixed term with the Cake',
+    id: 'Innovation Party',
+    title: 'Josh Fawley',
     accepted: {
       vote: 11003,
       percentage: 90,
@@ -791,12 +788,12 @@ export const cripticVotes = [
       },
     ],
     description: `
-      <h6>Simple Summary</h6>
-      <p>Extend POOL drip for UNI, COMP, Dai, USDC, and SUSHI Ethereum pools until the end of October. Extend prizes and drip for the POOL pool as well.</p>
-      <h6>Motivation</h6>
-      <p>The POOL drips for most Ethereum pools will be ending within the next 2 weeks (see details here). This proposal serves to maintain the statusquo of POOL incentives on Ethereum. However, it only extends the status quo for a relatively short amount of additional time. This is becausethe V4 prize pool will be launching in mid October and a larger incentive overhaul will be.</p>
-      <h6>Where Can I get Some?</h6>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+      <h6>Vision and Goals</h6>
+      <p>Throughout his career, Josh has been actively involved in various community initiatives and social justice campaigns. From organizing neighborhood clean-up events to advocating for affordable housing and education reform, Josh has demonstrated a deep commitment to creating a more equitable and inclusive society. His tireless efforts and unwavering dedication have earned him the respect and admiration of his peers and constituents.</p>
+      <P>Josh promises to continue fighting for the rights and well-being of all members of his community. With a focus on collaboration and grassroots engagement, he aims to amplify the voices of marginalized groups and address systemic injustices. Josh is committed to advocating for policies that promote social and economic equality, affordable healthcare, and access to quality education. His vision for the future is one of unity, compassion, and opportunity, where every individual has the chance to thrive and fulfill their potential..</p>
+      > 
+       
+       
     `,
     action: [
       {

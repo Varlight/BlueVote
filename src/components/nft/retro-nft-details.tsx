@@ -175,7 +175,7 @@ export default function RetroNFTDetails({
                     </div>
                   </TabPanel>
                   <TabPanel className="focus:outline-none">
-                    <div className="flex flex-col-reverse">
+                    {/* <div className="flex flex-col-reverse">
                       {nftData?.bids?.map((bid) => (
                         <FeaturedCard
                           item={bid}
@@ -183,10 +183,10 @@ export default function RetroNFTDetails({
                           className="mb-3 first:mb-0"
                         />
                       ))}
-                    </div>
+                    </div> */}
                   </TabPanel>
                   <TabPanel className="focus:outline-none">
-                    <div className="flex flex-col-reverse">
+                    {/* <div className="flex flex-col-reverse">
                       {nftData?.history?.map((item) => (
                         <FeaturedCard
                           item={item}
@@ -194,25 +194,25 @@ export default function RetroNFTDetails({
                           className="mb-3 first:mb-0"
                         />
                       ))}
-                    </div>
+                    </div> */}
                   </TabPanel>
                 </ParamTab>
               </div>
             </div>
-            <NftFooter
+            {/* <NftFooter
               className="hidden md:block"
               currentBid={nftData?.bids[nftData?.bids?.length - 1]}
               auctionTime={Date.now() + 4000000 * 10}
               isAuction={isAuction}
               price={price}
-            />
+            /> */}
           </div>
-          <NftFooter
+          {/* <NftFooter
             currentBid={nftData?.bids[nftData?.bids?.length - 1]}
             auctionTime={Date.now() + 4000000 * 10}
             isAuction={isAuction}
             price={price}
-          />
+          /> */}
         </div>
       </div>
     </>

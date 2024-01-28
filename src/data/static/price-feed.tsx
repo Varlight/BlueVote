@@ -11,7 +11,7 @@ import { Cardano } from '@/components/icons/cardano';
 export const priceFeedData = [
   {
     id: '0',
-    name: 'LibertyParty',
+    name: 'Liberty Party',
     symbol: 'Total Votes',
     balance: '25983',
     usdBalance: '11,032',
@@ -34,7 +34,7 @@ export const priceFeedData = [
   },
   {
     id: '1',
-    name: 'Congress',
+    name: 'Innvovation Party',
     symbol: 'Total Votes',
     balance: '17345',
     usdBalance: '1,032',
