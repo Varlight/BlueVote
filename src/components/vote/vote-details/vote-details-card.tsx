@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import dayjs from 'dayjs';
 import cn from 'classnames';
@@ -13,11 +13,97 @@ import VoterTable from '@/components/vote/vote-details/voter-table';
 import { fadeInBottom } from '@/lib/framer-motion/fade-in-bottom';
 import { useLayout } from '@/lib/hooks/use-layout';
 import { LAYOUT_OPTIONS } from '@/lib/constants';
+import { ethers } from 'ethers';
+import axios from 'axios';
 
-function VoteActionButton({ setIsCardVisible }) {
+function VoteActionButton() {
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [contract, setContract] = useState(null);
+  const [signer, setSigner] = useState(null);
+  const [voted, setVoted] = useState(false);
+  const contractAdress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+
+  useEffect(() => {
+    // Check if MetaMask is installed
+    if (typeof window.ethereum !== 'undefined' && contractAdress) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      setSigner(signer);
+
+      // Connect to the deployed VotingSystem contract
+      const votingSystemContract = new ethers.Contract(
+        contractAdress,
+        ['function vote(uint256)', 'function reject()'],
+        signer
+      );
+      setContract(votingSystemContract);
+    } else {
+      console.error('MetaMask not detected or contractAddress is undefined.');
+    }
+  }, [contractAdress]);
+
+
+
+  const handleVoteClick = async () => {
+    try {
+      setIsLoading(true);
+
+      // Check if the contract and signer are available
+      if (contract && signer) {
+        // Call the vote function on the smart contract
+        const transaction = await contract.vote(1); // Replace 1 with the candidate ID you want to vote for
+
+        // Wait for the transaction to be mined
+        await transaction.wait();
+
+        console.log('Vote successful!');
+
+        // Send POST request to backend API using Axios
+        const walletAddress = await signer.getAddress();
+        await axios.post("http://localhost:3001/markAsVoted", {
+          walletAddress,
+          isVoted: true,
+        });
+
+        // Set voted to true to conditionally render the component
+        setVoted(true);
+      } else {
+        console.error('Contract or signer not available.');
+      }
+    } catch (error) {
+      console.error('Error voting:', error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleRejectClick = async () => {
+    try {
+      setIsLoading(true);
+
+      // Check if the contract and signer are available
+      if (contract && signer) {
+        // Call the reject function on the smart contract
+        const transaction = await contract.reject();
+
+        // Wait for the transaction to be mined
+        await transaction.wait();
+
+        console.log('Reject successful!');
+      } else {
+        console.error('Contract or signer not available.');
+      }
+    } catch (error) {
+      console.error('Error rejecting:', error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="mt-4 flex items-center gap-3 xs:mt-6 xs:inline-flex md:mt-10">
-      <Button shape="rounded" color="success" className="flex-1 xs:flex-auto">
+      <Button shape="rounded" color="success" className="flex-1 xs:flex-auto" onClick={handleVoteClick}>
         Vote
       </Button>
       <Button

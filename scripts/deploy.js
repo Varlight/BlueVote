@@ -2,16 +2,14 @@ const hre = require('hardhat');
 const { ethers } = require('hardhat');
 
 async function main() {
-  const chainId = await ethers.provider
-    .getNetwork()
-    .then((network) => network.chainId);
-  console.log('Chain ID:', chainId);
-  const Greeter = await hre.ethers.getContractFactory('Greeter');
-  const greeter = await Greeter.deploy('Hello, Hardhat!');
+  const [deployer] = await ethers.getSigners();
 
-  await greeter.deployed();
+  console.log('Deploying contracts with the account:', deployer.address);
 
-  console.log('Greeter deployed to:', greeter.address);
+  const VotingSystem = await ethers.getContractFactory('VotingSystem');
+  const votingSystem = await VotingSystem.deploy();
+
+  console.log('VotingSystem deployed to:', votingSystem.address);
 }
 
 main()

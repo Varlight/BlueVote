@@ -46,7 +46,6 @@ function HeaderRightArea() {
       </div>
 
       <div className="flex items-center lg:hidden">
-        <NotificationButton />
         <Hamburger
           isOpen={isOpen}
           onClick={() => openDrawer('DRAWER_MENU')}
