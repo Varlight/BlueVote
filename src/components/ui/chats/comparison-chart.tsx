@@ -1,4 +1,4 @@
-import { useState, Fragment } from 'react';
+import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import cn from 'classnames';
 import {
@@ -19,6 +19,8 @@ import { RadioGroup } from '@/components/ui/radio-group';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { useBreakpoint } from '@/lib/hooks/use-breakpoint';
+import axios from 'axios';
+
 
 import {
   weeklyComparison,
@@ -48,9 +50,8 @@ function RadioGroupOption({ value }: RadioOptionProps) {
     <RadioGroup.Option value={value}>
       {({ checked }) => (
         <span
-          className={`relative flex h-8 cursor-pointer items-center justify-center rounded-lg px-3 text-sm uppercase tracking-wider ${
-            checked ? 'text-white' : 'text-brand dark:text-gray-400'
-          }`}
+          className={`relative flex h-8 cursor-pointer items-center justify-center rounded-lg px-3 text-sm uppercase tracking-wider ${checked ? 'text-white' : 'text-brand dark:text-gray-400'
+            }`}
         >
           {checked && (
             <motion.span
@@ -76,6 +77,21 @@ export default function ComparisonChart() {
   const [percentage, setPercentage] = useState('2.22%');
   const [toggleCoin, setToggleCoin] = useState(false);
   const formattedDate = format(new Date(date * 1000), 'MMMM d, yyyy hh:mma');
+  const [totalVotes, setTotalVotes] = useState(0);
+
+  useEffect(() => {
+    // Fetch total votes from the backend when the component mounts
+    const fetchTotalVotes = async () => {
+      try {
+        const response = await axios.get('https://blue-x3fg.onrender.com/getTotalVotes');
+        setTotalVotes(response.data.totalVotes);
+      } catch (error) {
+        console.error('Error fetching total votes:', error);
+      }
+    };
+
+    fetchTotalVotes();
+  }, []); // Empty dependency array ensures the effect runs once when the component mounts
 
   const handleOnChange = (value: string) => {
     setStatus(value);
@@ -133,7 +149,7 @@ export default function ComparisonChart() {
             </span>
           </div>
           <div className="mt-5 flex items-end gap-3 text-base font-medium text-gray-900 dark:text-white sm:text-xl lg:flex-wrap 2xl:flex-nowrap">
-            <span className="text-2xl font-semibold xl:text-4xl">25983</span>
+            <span className="text-2xl font-semibold xl:text-4xl">{totalVotes}</span>
             <span
               className={cn(
                 'flex items-end',
@@ -150,9 +166,8 @@ export default function ComparisonChart() {
               )}
             >
               <span
-                className={`inline-flex ltr:mr-2 rtl:ml-2 ${
-                  priceDiff > 0 ? '' : 'rotate-180'
-                }`}
+                className={`inline-flex ltr:mr-2 rtl:ml-2 ${priceDiff > 0 ? '' : 'rotate-180'
+                  }`}
               >
                 <ArrowUp />
               </span>

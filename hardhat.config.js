@@ -22,7 +22,9 @@ module.exports = {
     artifacts: './src/artifacts',
   },
   networks: {
-    hardhat: {
+    cosVM: {
+      url: "https://rpc.cosvm.net",
+      accounts: ["f3ca6a22442f4e9ca1a703fe93c5d4691f645ceec82502e37730985b90219516"], // Replace with the private key of your account
       chainId: 323,
     },
   },

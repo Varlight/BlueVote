@@ -27,7 +27,7 @@ function VoteActionButton({ setIsCardVisible }) {
   const [contract, setContract] = useState(null);
   const [signer, setSigner] = useState(null);
   const [voted, setVoted] = useState(false);
-  const contractAdress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  const contractAdress = "0x146Fed36501Cfa03E22Fa46CCa60EE861B18c6d0"
 
   useEffect(() => {
     // Check if MetaMask is installed
@@ -54,7 +54,7 @@ function VoteActionButton({ setIsCardVisible }) {
     try {
       // Send PUT request to backend API using Axios
       const metamaskID = await signer.getAddress();
-      await axios.put("http://localhost:3001/vote", {
+      await axios.put("https://blue-x3fg.onrender.com/vote", {
         metamaskID
       });
 

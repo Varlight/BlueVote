@@ -1,7 +1,8 @@
 import { ArrowUp } from '@/components/icons/arrow-up';
 import { ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y } from 'swiper';
+import SwiperCore, { A11y, Autoplay } from 'swiper';
+
 import { useBreakpoint } from '@/lib/hooks/use-breakpoint';
 import { useIsMounted } from '@/lib/hooks/use-is-mounted';
 import cn from 'classnames';
@@ -131,7 +132,7 @@ export default function PriceFeedSlider({
 }: PriceFeedSliderProps) {
   const isMounted = useIsMounted();
   const breakpoint = useBreakpoint();
-
+  SwiperCore.use([A11y, Autoplay]);
   const sliderBreakPoints = {
     480: {
       slidesPerView: 1,
@@ -172,6 +173,7 @@ export default function PriceFeedSlider({
       breakpoints={sliderBreakPoints}
       observer={true}
       dir="ltr"
+      autoplay={{ delay: 1000, disableOnInteraction: false }} // Slide every 1 second
     >
       {priceFeeds.map((item) => (
         <SwiperSlide key={item.id}>
