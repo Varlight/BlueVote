@@ -11,12 +11,12 @@ To install the project, follow these steps:
    git clone https://github.com/yourusername/project-name.git
 Navigate to the project directory:
 
-bash
+```bash
 Copy code
 cd project-name
 Install dependencies:
 
-bash
+```bash
 Copy code
 npm install
 Usage
@@ -24,7 +24,7 @@ To use the project, follow these steps:
 
 Run the development server:
 
-bash
+```bash
 Copy code
 npm run dev
 Open http://localhost:3000 in your browser to view the application.
