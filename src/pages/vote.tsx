@@ -56,13 +56,12 @@ const VotePage: NextPageWithLayout = () => {
             </h3>
             <p className="leading-loose text-gray-600 dark:text-gray-400">
               Unleash the power of blockchain as you cast your vote —
-              <br className="hidden xs:inline-block" /> a secure, transparent, and
-              technologically advanced choice.
-              <br className="hidden xs:inline-block" /> Embrace the future of voting with blockchain technology powered by cosVM.
+              <br className="hidden xs:inline-block" /> a secure, transparent,
+              and technologically advanced choice.
+              <br className="hidden xs:inline-block" /> Embrace the future of
+              voting with blockchain technology powered by XDC.
             </p>
           </motion.div>
-
-
         </div>
       </div>
     </>

@@ -108,7 +108,7 @@ const ProposalsPage: NextPageWithLayout = () => {
                 You have 1 vote
               </h2>
               <p className="leading-relaxed text-gray-600 dark:text-gray-400">
-                You need COSVM tokens to participate in governance.
+                You need XDC Tokens tokens to participate in governance.
               </p>
             </div>
           </div>

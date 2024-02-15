@@ -57,7 +57,7 @@ export default function MinimalScreen() {
                   className="h-50 w-50 mx-auto mb-6 rounded-full" // Add styling classes as needed
                 />
                 <h3 className="mb-2 text-center text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 3xl:mb-3">
-                  cosVM User
+                  XDC User
                 </h3>
                 <div className="flex justify-center">
                   <button
