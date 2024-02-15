@@ -1,6 +1,6 @@
 # Cryptogrow
 
-Welcome to Project Name! This project does XYZ.
+Welcome to Cryptogrow! This project does This is a voting application.
 
 ## Installation
 
