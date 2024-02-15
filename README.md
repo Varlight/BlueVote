@@ -1,8 +1,4 @@
-Sure, here's an example of a GitHub README.md file using Markdown syntax:
-
-markdown
-Copy code
-# Project Name
+# Cryptogrow
 
 Welcome to Project Name! This project does XYZ.
 
