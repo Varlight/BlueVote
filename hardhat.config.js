@@ -22,10 +22,10 @@ module.exports = {
     artifacts: './src/artifacts',
   },
   networks: {
-    cosVM: {
-      url: "https://rpc.cosvm.net",
-      accounts: ["f3ca6a22442f4e9ca1a703fe93c5d4691f645ceec82502e37730985b90219516"], // Replace with the private key of your account
-      chainId: 323,
+    txdc: {
+      url: "https://rpc.apothem.network",
+      accounts: ["853bd654b1efd5b2ba7a46fcda8ab0628d1a000d20cb713921b1a84df6cec0c7"],
+      chainId: 51,
     },
   },
 };
