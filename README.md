@@ -11,16 +11,12 @@ To install the project, follow these steps:
    git clone https://github.com/yourusername/project-name.git
 Navigate to the project directory:
 
-Install dependencies:
+Install dependencies and run
    ```bash
    npm install -legacy-peer-deps
-
-Usage
-To use the project, follow these steps:
-
-Run the development server:
-```bash
    npm run dev
-Open http://localhost:3000 in your browser to view the application.
 
-Start editing the project files. The page will auto-update as you edit.
+
+Open: http://localhost:3000 in your browser to view the application.
+
+
