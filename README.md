@@ -1,6 +1,6 @@
 ## This Project was created in NIT Trichy Pragyan Technical Hackathon as part of Pragyan Festival
 This Project Won 3rd Place
-# Cryptogrow
+# BlueVote
 
 Welcome to Cryptogrow! This project was created according to the requirements in the given problem statement.
 
