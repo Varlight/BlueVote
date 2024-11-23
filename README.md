@@ -1,3 +1,4 @@
+## This Project was created in NIT Trichy Pragyan Technical Hackathon as part of Pragyan Festival
 # Cryptogrow
 
 Welcome to Cryptogrow! This project does This is a voting application.
