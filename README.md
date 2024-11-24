@@ -3,6 +3,9 @@
 A cutting-edge, blockchain-based voting system leveraging Web3 technology for secure and transparent elections. 🔐🌐
 
 ![Voting Application Screenshot 1](1.png)
+![Voting Application Screenshot 2](2.png)
+![Voting Application Screenshot 3](3.png)
+![Voting Application Screenshot 4](4.png)
 
 ## 🏆 Achievements
 
