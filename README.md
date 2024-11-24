@@ -2,7 +2,7 @@
 
 A cutting-edge, blockchain-based voting system leveraging Web3 technology for secure and transparent elections. 🔐🌐
 
-![Voting Application Screenshot 1](images/1.png)
+![Voting Application Screenshot 1](1.png)
 
 ## 🏆 Achievements
 
@@ -30,7 +30,7 @@ To get started with the Blue-Blockchain-Voting-Application, follow these steps:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/sriramsenthill/Blue-Blockchain-Voting-Application.git
+   git clone https://github.com/Varlight/BlueVote.git
    ```
 2. Navigate to the project directory:
    ```
@@ -63,7 +63,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## 📞 Contact
 
-For any questions or feedback, please reach out to Senthilnathan S at [mail](sriram.senthilnathan@gmail.com).
+For any questions or feedback, please reach out to Senthilnathan S at [mail](stillrockinn@proton.me).
 
 ---
 
